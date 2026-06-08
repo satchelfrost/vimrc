@@ -1,5 +1,5 @@
 colorscheme slate
-" coloescheme evening
+"colorscheme evening
 
 set number
 set relativenumber
@@ -53,6 +53,7 @@ set listchars=tab:»·,trail:◘
 " Matching parens etc.
 inoremap ( ()<Left>
 inoremap { {}<Left>
+inoremap [ []<Left>
 inoremap {<CR> {<CR>}<Esc>O
 inoremap " ""<Left>
 inoremap ' ''<Left>
