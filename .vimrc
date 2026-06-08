@@ -12,6 +12,7 @@ set scrolloff=8
 set colorcolumn=120
 set incsearch
 set guicursor=""
+set hidden
 
 " to display whitespace uncomment the below line
 "set list
