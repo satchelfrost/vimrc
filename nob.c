@@ -1,7 +1,7 @@
 #define NOB_IMPLEMENTATION
 #include "nob.h"
 
-const char *vim_srcs[] = {"glsl.vim"};
+const char *vim_srcs[] = {"c.vim", "glsl.vim"};
 
 int main(int argc, char **argv)
 {

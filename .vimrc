@@ -1,5 +1,6 @@
-colorscheme slate
+"colorscheme slate
 "colorscheme evening
+colorscheme sorbet
 
 set number
 set relativenumber
@@ -13,9 +14,6 @@ set colorcolumn=120
 set incsearch
 set guicursor=""
 set hidden
-
-" to display whitespace uncomment the below line
-"set list
 
 " search down into subfolders
 set path+=**
@@ -48,6 +46,8 @@ vnoremap <Leader>y "+y
 " remap control-c to escape
 inoremap <C-c> <Esc>
 
+" to display whitespace uncomment the below line
+"set list
 " show trailing whitespace
 set listchars=tab:»·,trail:◘
 
@@ -58,3 +58,14 @@ inoremap [ []<Left>
 inoremap {<CR> {<CR>}<Esc>O
 inoremap " ""<Left>
 inoremap ' ''<Left>
+
+" comment and uncomment
+augroup visual_commenting
+    autocmd!
+    autocmd FileType c,cpp,java,glsl  let b:comment_symbol = '//'
+    autocmd FileType vim              let b:comment_symbol = '"'
+    autocmd FileType sh,python        let b:comment_symbol = '#'
+    autocmd FileType tex              let b:comment_symbol = '%'
+    autocmd BufEnter * silent! vnoremap <silent> <C-_> :<C-u>keepp '<,'>s@^@\=b:comment_symbol<CR>
+    autocmd BufEnter * silent! exec 'vnoremap <silent> <C-?> :<C-u>keepp ''<,''>s@^' . b:comment_symbol . '@<CR>'
+augroup END
