@@ -43,7 +43,7 @@ nnoremap <Leader>pv :E<CR>
 nnoremap <Leader>b :bn<CR>
 
 " paste to clipboard
-vnoremap <Leader>y \"+y
+vnoremap <Leader>y "+y
 
 " remap control-c to escape
 inoremap <C-c> <Esc>
