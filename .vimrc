@@ -51,13 +51,13 @@ inoremap <C-c> <Esc>
 " show trailing whitespace
 set listchars=tab:»·,trail:◘
 
-" Matching parens etc.
-inoremap ( ()<Left>
-inoremap { {}<Left>
-inoremap [ []<Left>
+" Matching parens etc. (lately I don't like this feature)
+"inoremap ( ()<Left>
+"inoremap { {}<Left>
+"inoremap [ []<Left>
+"inoremap " ""<Left>
+"inoremap ' ''<Left>
 inoremap {<CR> {<CR>}<Esc>O
-inoremap " ""<Left>
-inoremap ' ''<Left>
 
 " comment and uncomment
 augroup visual_commenting
